@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   root 'pages#home'
   get 'about', to: 'pages#about'
   resources :articles
+  get 'signup', to: 'users#new'  #creates a signup route and send it to users controller and show
+  resources :users, except: [:new]
 end
