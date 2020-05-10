@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :articles
   get 'signup', to: 'users#new'  #creates a signup route and send it to users controller and show
   resources :users, except: [:new]
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end
