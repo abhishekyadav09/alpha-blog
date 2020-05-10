@@ -12,4 +12,5 @@ class ApplicationController < ActionController::Base
     # !! converts the variable into a boolean
     !!current_user
   end
+  
 end
